@@ -37,7 +37,7 @@ var obj = {
   },
 };
 var simpleGetter = makeSimpleGetter('foo');
-var nesterGetter = makeNestedGetter(['bar', 'baz']);
+var nestedGetter = makeNestedGetter(['bar', 'baz']);
 var caSimpleGetter = ca.getter('foo');
 var caNestedGetter = ca.getter(['bar', 'baz']);
 
@@ -58,8 +58,8 @@ new Benchmark.Suite()
 ;
 
 new Benchmark.Suite()
-  .add('nesterGetter()', function () {
-    return nesterGetter(obj);
+  .add('nestedGetter()', function () {
+    return nestedGetter(obj);
   })
   .add('caNestedGetter()', function () {
     return caNestedGetter(obj);
