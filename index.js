@@ -1,5 +1,7 @@
 // UMD: https://github.com/umdjs/umd/blob/master/returnExports.js
 (function (root, factory) {
+  /* global define: false */
+  'use strict';
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
