@@ -12,7 +12,7 @@
     module.exports = factory();
   } else {
     // Browser globals (root is window)
-    root.humanFormat = factory();
+    root.compiledAccessors = factory();
   }
 }(this, function () {
   'use strict';
