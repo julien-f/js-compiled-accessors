@@ -30,12 +30,17 @@
     };
 
     return {
+      array: _([]),
       string: _(''),
     };
   })();
 
   var pathToString = function (path) {
-    if (is.string(path)) {
+    if (!is.array(path)) {
+      if (!is.string(path)) {
+        path = ''+ path;
+      }
+
       path = path.split('.');
     }
 
